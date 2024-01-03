@@ -28,7 +28,10 @@ submit = st.button("Generate blog")
 if submit:
     prompt = "Write a blog on the topic of " + topic + " in " + blog_style + " style. The blog should be " + str(num_words) + " words long."
     with st.spinner("Generating blog..."):
-        response = get_response(prompt)
-        st.success("Blog generated!")
-        st.subheader("Blog - " + topic)
-        st.write(response)
+        try:
+            response = get_response(prompt)
+            st.success("Blog generated!")
+            st.subheader("Blog - " + topic)
+            st.write(response)
+        except:
+            st.error("Something went wrong. Please try again.")
