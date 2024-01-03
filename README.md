@@ -4,7 +4,7 @@
 
 <p align=center>
     <a href="https://piyushchugeja-blog-generator.streamlit.app/">
-        <img alt="Website" src="https://img.shields.io/website?down_color=red&down_message=offline&label=website&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fpiyushchugeja-blog-generator.streamlit.app%2F">
+        <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App">
     </a>
 </p>
 
