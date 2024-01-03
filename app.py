@@ -1,10 +1,8 @@
-import textwrap
-import os
 from click import prompt
 import google.generativeai as genai
 import streamlit as st
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 model = genai.GenerativeModel('gemini-pro')
 
 def get_response(prompt):
