@@ -10,7 +10,3 @@
 
 
 This project uses the Gemini Pro API for its core functionality. 
-
-## About Gemini Pro API
-
-Gemini Pro is a powerful API that provides various features (describe the features here). 
