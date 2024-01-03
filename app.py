@@ -19,7 +19,7 @@ col1, col2 = st.columns([5, 5])
 
 with col1:
     num_words = st.number_input("Number of words", min_value=50, max_value=500, value=100, step=50)
-    language = st.selectbox("Choose language", ["English", "Hindi", "Marathi", "French", "German", "Spanish", "Italian", "Portuguese", "Dutch", "Russian", "Japanese", "Korean", "Chinese"])
+    language = st.selectbox("Choose language", ["English", "Hindi", "French", "German", "Spanish", "Italian", "Portuguese", "Dutch", "Russian", "Japanese", "Korean", "Chinese"])
 
 with col2:
     blog_style = st.selectbox("Choose blog style", ["Modern", "Classic", "Formal", "Casual", "Futuristic", "Research"])
@@ -34,5 +34,6 @@ if submit:
             response = get_response(prompt)
             st.success("Blog generated!")
             st.write(response)
-        except:
+        except Exception as e:
             st.error("Something went wrong. Please try again.")
+            print(e)
