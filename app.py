@@ -1,4 +1,3 @@
-from click import prompt
 import google.generativeai as genai
 import streamlit as st
 
