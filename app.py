@@ -1,7 +1,8 @@
 import google.generativeai as genai
 import streamlit as st
+import os
 
-genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
 model = genai.GenerativeModel('gemini-pro')
 
 def get_response(prompt):
@@ -35,5 +36,5 @@ if submit:
             st.success("Blog generated!")
             st.write(response)
         except Exception as e:
-            st.error("Something went wrong. Please try again.")
             print(e)
+            st.error("Something went wrong. Please try again.")
